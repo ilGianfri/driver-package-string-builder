@@ -9,7 +9,7 @@ namespace ConsoleApp2
         {
             string[] fileEntries = Directory.GetDirectories(@"C:\10X\DCHUDrivers");
 
-            using StreamWriter w = File.AppendText("output.txt");
+            using (StreamWriter w = new StreamWriter(@"output.txt", false))
             {
                 foreach (string directory in fileEntries)
                 {
